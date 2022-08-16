@@ -16,14 +16,8 @@
 # print('}')
 
 import base64
-import json
-import logging
-import re
 import time
-import os
-import bs4
 import requests
-import hashlib
 
 
 UA_captcha_url = r'https://ua.scu.edu.cn/captcha?captchaId=4057950348'
@@ -33,21 +27,10 @@ captcha_break_url = r'http://localhost:19952/captcha/v1'
 
 import time
 import json
-import optparse
-import threading
-import tornado.ioloop
 import tornado.log
-import tensorflow as tf
-from tornado.web import RequestHandler
-from constants import Response, color_map
-from json.decoder import JSONDecodeError
-from tornado.escape import json_decode, json_encode
+from tornado.escape import json_encode
 from interface import InterfaceManager
-from config import Config
-from utils import ImageUtils, ParamUtils
-from signature import Signature, ServerType
-from watchdog.observers import Observer
-from event_handler import FileEventHandler
+from utils import ImageUtils
 
 
 

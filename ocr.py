@@ -44,7 +44,7 @@ def run(input):
     size_string = "{}x{}".format(image_size[0], image_size[1])
     interface = interface_manager.get_by_size(size_string)
 
-    split_char = interface.model_conf.split_char
+    split_char = ''
 
 
 

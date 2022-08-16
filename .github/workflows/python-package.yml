@@ -30,5 +30,5 @@ jobs:
           if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
       - name: Run app
         run: |
-          python3 ocr.py
           captcha_platform-0.1/tornado_server.py
+          python3 ocr.py

@@ -43,12 +43,12 @@ def run(input):
     image_size = ImageUtils.size_of_image(image_sample)
     size_string = "{}x{}".format(image_size[0], image_size[1])
     interface = interface_manager.get_by_size(size_string)
-
+    print(size_string)
     split_char = ''
 
 
 
-    image_batch, response = ImageUtils.get_image_batch('', bytes_batch)
+    image_batch, response = ImageUtils.get_image_batch(interface.model_conf, bytes_batch)
 
 
     result = interface.predict_batch(image_batch, split_char)

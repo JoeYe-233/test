@@ -48,7 +48,7 @@ def run(input):
 
 
 
-    image_batch, response = ImageUtils.get_image_batch(interface.model_conf, bytes_batch)
+    image_batch, response = ImageUtils.get_image_batch('', bytes_batch)
 
 
     result = interface.predict_batch(image_batch, split_char)

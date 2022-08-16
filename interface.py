@@ -96,7 +96,7 @@ class InterfaceManager(object):
             interface = self.group[i]
             if interface.version > self.group[i].version:
                 max_id = i
-        return self.group[max_id] if match_ids else self.default if return_default else None
+        return self.group[max_id] #if match_ids else self.default if return_default else None
 
     def get_by_type_size(self, size: str, model_type: str, return_default=True):
         match_ids = [

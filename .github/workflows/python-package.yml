@@ -27,7 +27,8 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          if [ -f requirements.txt ]; then pip install -r requirements.txt -i https://mirrors.aliyun.com/pypi/simple/; fi
+          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
       - name: Run app
         run: |
           python3 ocr.py
+          captcha_platform-0.1/tornado_server.py
